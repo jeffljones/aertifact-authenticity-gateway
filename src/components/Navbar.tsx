@@ -31,9 +31,15 @@ const Navbar = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
-            <a href="#" className="text-aertifact-blue flex items-center">
+            <a href="#" className="flex items-center">
               <span className="text-2xl font-display font-bold">
-                Ær<span className="text-aertifact-accent">tifact</span>
+                <span className={cn(
+                  "transition-colors",
+                  isScrolled ? "text-aertifact-blue" : "text-white"
+                )}>
+                  Ær
+                </span>
+                <span className="text-aertifact-accent">tifact</span>
               </span>
             </a>
           </div>
