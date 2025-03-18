@@ -21,6 +21,14 @@ const Navbar = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+      setIsMobileMenuOpen(false);
+    }
+  };
+
   return (
     <header 
       className={cn(
@@ -31,7 +39,14 @@ const Navbar = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
-            <a href="#" className="flex items-center">
+            <a 
+              href="#" 
+              onClick={(e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="flex items-center"
+            >
               <span className="text-2xl font-display font-bold">
                 <span className={cn(
                   "transition-colors",
@@ -46,23 +61,38 @@ const Navbar = () => {
           
           <div className="hidden md:block">
             <nav className="ml-10 flex items-baseline space-x-8">
-              <a href="#about" className="text-aertifact-blue hover:text-aertifact-accent px-3 py-2 text-sm font-medium transition-colors">
+              <button 
+                onClick={() => scrollToSection('about')}
+                className="text-aertifact-blue hover:text-aertifact-accent px-3 py-2 text-sm font-medium transition-colors"
+              >
                 About
-              </a>
-              <a href="#technology" className="text-aertifact-blue hover:text-aertifact-accent px-3 py-2 text-sm font-medium transition-colors">
+              </button>
+              <button 
+                onClick={() => scrollToSection('technology')}
+                className="text-aertifact-blue hover:text-aertifact-accent px-3 py-2 text-sm font-medium transition-colors"
+              >
                 Technology
-              </a>
-              <a href="#solutions" className="text-aertifact-blue hover:text-aertifact-accent px-3 py-2 text-sm font-medium transition-colors">
+              </button>
+              <button 
+                onClick={() => scrollToSection('solutions')}
+                className="text-aertifact-blue hover:text-aertifact-accent px-3 py-2 text-sm font-medium transition-colors"
+              >
                 Solutions
-              </a>
-              <a href="#markets" className="text-aertifact-blue hover:text-aertifact-accent px-3 py-2 text-sm font-medium transition-colors">
+              </button>
+              <button 
+                onClick={() => scrollToSection('markets')}
+                className="text-aertifact-blue hover:text-aertifact-accent px-3 py-2 text-sm font-medium transition-colors"
+              >
                 Markets
-              </a>
+              </button>
             </nav>
           </div>
           
           <div className="hidden md:block">
-            <Button className="bg-aertifact-blue text-white hover:bg-aertifact-accent transition-colors">
+            <Button 
+              className="bg-aertifact-blue text-white hover:bg-aertifact-accent transition-colors"
+              onClick={() => scrollToSection('contact')}
+            >
               Contact Us
             </Button>
           </div>
@@ -83,38 +113,34 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white shadow-lg">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a 
-              href="#about" 
-              className="text-aertifact-blue hover:text-aertifact-accent block px-3 py-2 text-base font-medium"
-              onClick={() => setIsMobileMenuOpen(false)}
+            <button 
+              className="text-aertifact-blue hover:text-aertifact-accent block px-3 py-2 text-base font-medium w-full text-left"
+              onClick={() => scrollToSection('about')}
             >
               About
-            </a>
-            <a 
-              href="#technology" 
-              className="text-aertifact-blue hover:text-aertifact-accent block px-3 py-2 text-base font-medium"
-              onClick={() => setIsMobileMenuOpen(false)}
+            </button>
+            <button 
+              className="text-aertifact-blue hover:text-aertifact-accent block px-3 py-2 text-base font-medium w-full text-left"
+              onClick={() => scrollToSection('technology')}
             >
               Technology
-            </a>
-            <a 
-              href="#solutions" 
-              className="text-aertifact-blue hover:text-aertifact-accent block px-3 py-2 text-base font-medium"
-              onClick={() => setIsMobileMenuOpen(false)}
+            </button>
+            <button 
+              className="text-aertifact-blue hover:text-aertifact-accent block px-3 py-2 text-base font-medium w-full text-left"
+              onClick={() => scrollToSection('solutions')}
             >
               Solutions
-            </a>
-            <a 
-              href="#markets" 
-              className="text-aertifact-blue hover:text-aertifact-accent block px-3 py-2 text-base font-medium"
-              onClick={() => setIsMobileMenuOpen(false)}
+            </button>
+            <button 
+              className="text-aertifact-blue hover:text-aertifact-accent block px-3 py-2 text-base font-medium w-full text-left"
+              onClick={() => scrollToSection('markets')}
             >
               Markets
-            </a>
+            </button>
             <div className="pt-4">
               <Button 
                 className="w-full bg-aertifact-blue text-white hover:bg-aertifact-accent"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={() => scrollToSection('contact')}
               >
                 Contact Us
               </Button>

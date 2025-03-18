@@ -2,16 +2,27 @@
 import { Github, Linkedin, Twitter } from 'lucide-react';
 
 const Footer = () => {
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <footer className="bg-aertifact-dark text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
-            <a href="#" className="text-white flex items-center">
+            <button onClick={scrollToTop} className="text-white flex items-center">
               <span className="text-2xl font-display font-bold">
                 Ær<span className="text-aertifact-accent">tifact</span>
               </span>
-            </a>
+            </button>
             <p className="mt-4 text-gray-300">
               Blockchain-Powered Authentication & Provenance Platform for High-Value Collectibles
             </p>
@@ -30,32 +41,32 @@ const Footer = () => {
           
           <div className="md:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-lg font-semibold mb-4">Company</h3>
+              <h3 className="text-lg font-semibold mb-4">Navigation</h3>
               <ul className="space-y-2">
-                <li><a href="#about" className="text-gray-300 hover:text-white transition-colors">About Us</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Team</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Careers</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Blog</a></li>
+                <li><button onClick={() => scrollToSection('about')} className="text-gray-300 hover:text-white transition-colors">About Us</button></li>
+                <li><button onClick={() => scrollToSection('technology')} className="text-gray-300 hover:text-white transition-colors">Technology</button></li>
+                <li><button onClick={() => scrollToSection('solutions')} className="text-gray-300 hover:text-white transition-colors">Solutions</button></li>
+                <li><button onClick={() => scrollToSection('markets')} className="text-gray-300 hover:text-white transition-colors">Markets</button></li>
               </ul>
             </div>
             
             <div>
               <h3 className="text-lg font-semibold mb-4">Solutions</h3>
               <ul className="space-y-2">
-                <li><a href="#solutions" className="text-gray-300 hover:text-white transition-colors">Authentication</a></li>
-                <li><a href="#technology" className="text-gray-300 hover:text-white transition-colors">Technology</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">API Documentation</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Integrations</a></li>
+                <li><button onClick={() => scrollToSection('solutions')} className="text-gray-300 hover:text-white transition-colors">Authentication</button></li>
+                <li><button onClick={() => scrollToSection('technology')} className="text-gray-300 hover:text-white transition-colors">Technology</button></li>
+                <li><button onClick={() => scrollToSection('contact')} className="text-gray-300 hover:text-white transition-colors">API Access</button></li>
+                <li><button onClick={() => scrollToSection('solutions')} className="text-gray-300 hover:text-white transition-colors">Integration</button></li>
               </ul>
             </div>
             
             <div>
-              <h3 className="text-lg font-semibold mb-4">Support</h3>
+              <h3 className="text-lg font-semibold mb-4">Contact</h3>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Help Center</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Terms of Service</a></li>
+                <li><button onClick={() => scrollToSection('contact')} className="text-gray-300 hover:text-white transition-colors">Help Center</button></li>
+                <li><button onClick={() => scrollToSection('contact')} className="text-gray-300 hover:text-white transition-colors">Contact Us</button></li>
+                <li><button onClick={scrollToTop} className="text-gray-300 hover:text-white transition-colors">Privacy Policy</button></li>
+                <li><button onClick={scrollToTop} className="text-gray-300 hover:text-white transition-colors">Terms of Service</button></li>
               </ul>
             </div>
           </div>

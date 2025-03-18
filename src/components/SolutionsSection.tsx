@@ -11,6 +11,13 @@ const ServiceCard = ({
   description: string, 
   price: string 
 }) => {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="bg-white p-8 rounded-lg shadow-md card-glow border border-gray-100 hover:border-aertifact-accent transition-all h-full flex flex-col justify-between">
       <div>
@@ -19,7 +26,11 @@ const ServiceCard = ({
       </div>
       <div>
         <div className="text-aertifact-accent font-semibold mb-4">{price}</div>
-        <Button variant="outline" className="border-aertifact-blue text-aertifact-blue hover:bg-aertifact-blue hover:text-white w-full">
+        <Button 
+          variant="outline" 
+          className="border-aertifact-blue text-aertifact-blue hover:bg-aertifact-blue hover:text-white w-full"
+          onClick={scrollToContact}
+        >
           Learn More
           <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
