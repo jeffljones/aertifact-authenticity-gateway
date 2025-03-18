@@ -65,8 +65,8 @@ const Footer = () => {
               <ul className="space-y-2">
                 <li><button onClick={() => scrollToSection('contact')} className="text-gray-300 hover:text-white transition-colors">Help Center</button></li>
                 <li><button onClick={() => scrollToSection('contact')} className="text-gray-300 hover:text-white transition-colors">Contact Us</button></li>
-                <li><button onClick={scrollToTop} className="text-gray-300 hover:text-white transition-colors">Privacy Policy</button></li>
-                <li><button onClick={scrollToTop} className="text-gray-300 hover:text-white transition-colors">Terms of Service</button></li>
+                <li><button onClick={() => scrollToSection('contact')} className="text-gray-300 hover:text-white transition-colors">Privacy Policy</button></li>
+                <li><button onClick={() => scrollToSection('contact')} className="text-gray-300 hover:text-white transition-colors">Terms of Service</button></li>
               </ul>
             </div>
           </div>
