@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Lock, Fingerprint } from "lucide-react";
 
@@ -18,7 +17,7 @@ const HeroSection = () => {
             </h1>
             <p className="text-lg md:text-xl mb-8 text-gray-200 max-w-2xl">
               Aertifact provides tamper-proof verification for high-value assets through 
-              RFID/NFC authentication, AI-driven wood grain fingerprinting, 
+              RFID/NFC authentication, AI-powered physical characteristic analysis, 
               and blockchain-based provenance tracking.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -53,10 +52,11 @@ const HeroSection = () => {
                     <Fingerprint className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2">AI Wood Grain Fingerprinting</h3>
+                    <h3 className="text-xl font-semibold mb-2">AI Physical Characteristic Analysis</h3>
                     <p className="text-gray-200">
-                      Our proprietary technology creates a unique digital fingerprint 
-                      for wooden assets, ensuring authenticity beyond physical tags.
+                      Our proprietary technology creates unique digital fingerprints 
+                      based on wood grain, textile patterns, and custom finishing details, 
+                      ensuring authenticity beyond physical tags.
                     </p>
                   </div>
                 </div>

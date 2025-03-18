@@ -37,8 +37,8 @@ const TechnologySection = () => {
     },
     {
       icon: Fingerprint,
-      title: "Wood Grain Fingerprinting",
-      description: "AI-powered analysis that creates a unique digital fingerprint of wooden assets for verification."
+      title: "AI Physical Authentication",
+      description: "Computer vision analysis that creates unique digital fingerprints of items based on wood grain, textile weaves, and custom finishing details."
     },
     {
       icon: Radio,

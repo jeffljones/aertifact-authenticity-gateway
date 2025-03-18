@@ -41,8 +41,8 @@ const SolutionsSection = () => {
       price: "$10 per unit"
     },
     {
-      title: "Wood Grain Fingerprinting",
-      description: "Our proprietary AI technology for musical instruments and fine wooden assets, creating a unique digital identification.",
+      title: "AI Physical Identification",
+      description: "Our proprietary technology creates unique digital fingerprints based on wood grain, textile patterns, and custom finishing details in handcrafted items.",
       price: "$50 - $200 per analysis"
     },
     {
