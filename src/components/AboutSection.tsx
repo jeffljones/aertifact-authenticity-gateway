@@ -14,8 +14,9 @@ const AboutSection = () => {
             The Future of Authentication
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Aertifact is positioned to be the industry standard for digital provenance 
-            and authentication services across multiple high-value asset industries.
+            We envision a world where authenticity is never in doubt—where every collector, 
+            brand, and marketplace can instantly confirm provenance through secure, 
+            user-friendly technology.
           </p>
         </div>
         
@@ -34,9 +35,9 @@ const AboutSection = () => {
               Our Vision
             </h3>
             <p className="text-gray-700 mb-6">
-              To create a <strong>tamper-proof, blockchain-secured authentication system</strong> that ensures 
-              the integrity, transparency, and security of valuable collectibles, luxury goods, 
-              and investment-grade assets.
+              By <strong>leveraging AI and blockchain</strong>, Aertifact aspires to be the <strong>global standard</strong> 
+              for authenticating physical assets, from fine art and antiques to luxury fashion and automotive components, 
+              ensuring that <strong>authenticity is never in doubt</strong>.
             </p>
             
             <div className="mt-8">
@@ -56,16 +57,24 @@ const AboutSection = () => {
               <div className="flex">
                 <CheckCircle2 className="h-6 w-6 text-aertifact-accent mr-3 flex-shrink-0" />
                 <div>
-                  <h4 className="font-semibold text-gray-900">RFID/NFC + Blockchain Provenance</h4>
-                  <p className="text-gray-600">Secure, immutable records that prevent fraud and counterfeiting.</p>
+                  <h4 className="font-semibold text-gray-900">AI-Driven Physical Fingerprinting</h4>
+                  <p className="text-gray-600">Our proprietary AI captures microscopic visual patterns, creating a natural fingerprint for each asset.</p>
                 </div>
               </div>
               
               <div className="flex">
                 <CheckCircle2 className="h-6 w-6 text-aertifact-accent mr-3 flex-shrink-0" />
                 <div>
-                  <h4 className="font-semibold text-gray-900">AI-Powered Wood Grain Fingerprinting</h4>
-                  <p className="text-gray-600">Unique to Aertifact, creating a natural fingerprint for wooden assets.</p>
+                  <h4 className="font-semibold text-gray-900">Blockchain-Backed Provenance</h4>
+                  <p className="text-gray-600">Every item is registered on a tamper-proof blockchain, ensuring transparency and trust.</p>
+                </div>
+              </div>
+              
+              <div className="flex">
+                <CheckCircle2 className="h-6 w-6 text-aertifact-accent mr-3 flex-shrink-0" />
+                <div>
+                  <h4 className="font-semibold text-gray-900">RFID/NFC Authentication</h4>
+                  <p className="text-gray-600">Link assets to RFID/NFC tags for quick verification using our mobile app or API calls.</p>
                 </div>
               </div>
               
@@ -73,15 +82,7 @@ const AboutSection = () => {
                 <CheckCircle2 className="h-6 w-6 text-aertifact-accent mr-3 flex-shrink-0" />
                 <div>
                   <h4 className="font-semibold text-gray-900">B2B & API-Focused Approach</h4>
-                  <p className="text-gray-600">Integrates seamlessly into existing business operations.</p>
-                </div>
-              </div>
-              
-              <div className="flex">
-                <CheckCircle2 className="h-6 w-6 text-aertifact-accent mr-3 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold text-gray-900">Third-Party Escrow Integrations</h4>
-                  <p className="text-gray-600">Secure transactions without the regulatory complexity.</p>
+                  <p className="text-gray-600">Integrate Aertifact's authentication directly into your platform with our secure, enterprise-grade API.</p>
                 </div>
               </div>
             </div>
