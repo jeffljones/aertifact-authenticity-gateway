@@ -26,7 +26,10 @@ const HeroSection = () => {
                 Request a Demo
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button variant="outline" className="border-white text-aertifact-blue bg-white hover:bg-white/10 hover:text-white transition-colors text-base px-6 py-6">
+              <Button 
+                variant="outline" 
+                className="border-white bg-white text-aertifact-blue hover:bg-white/10 hover:text-white transition-colors text-base px-6 py-6"
+              >
                 Learn More
               </Button>
             </div>
