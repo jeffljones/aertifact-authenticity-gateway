@@ -3,10 +3,12 @@ import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,10 +24,23 @@ const Navbar = () => {
   };
 
   const scrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-      setIsMobileMenuOpen(false);
+    // If we're not on the homepage, navigate there first
+    if (window.location.pathname !== '/') {
+      navigate('/');
+      // Need a small delay to allow navigation to complete before scrolling
+      setTimeout(() => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+          setIsMobileMenuOpen(false);
+        }
+      }, 100);
+    } else {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+        setIsMobileMenuOpen(false);
+      }
     }
   };
 
@@ -39,24 +54,17 @@ const Navbar = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
-            <a 
-              href="#" 
-              onClick={(e) => {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
+            <Link 
+              to="/"
               className="flex items-center"
             >
               <span className="text-2xl font-display font-bold">
-                <span className={cn(
-                  "transition-colors",
-                  isScrolled ? "text-aertifact-blue" : "text-white"
-                )}>
+                <span className="text-aertifact-blue">
                   Ær
                 </span>
                 <span className="text-aertifact-accent">tifact</span>
               </span>
-            </a>
+            </Link>
           </div>
           
           <div className="hidden md:block">
