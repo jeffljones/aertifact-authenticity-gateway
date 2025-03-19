@@ -23,6 +23,12 @@ const ContactSection = () => {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a 
+                    href="tel:8135635787" 
+                    className="flex items-center text-white hover:text-aertifact-silver"
+                  >
+                    <span className="mr-2">(813) 563-5787</span>
+                  </a>
+                  <a 
                     href="mailto:info@aertifact.com" 
                     className="flex items-center text-white hover:text-aertifact-silver"
                   >

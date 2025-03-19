@@ -128,7 +128,7 @@ const PrivacyPolicy = () => {
                 100 Innovation Way<br />
                 New York, NY 10001<br />
                 Email: privacy@aertifact.com<br />
-                Phone: +1 (555) 123-4567
+                Phone: (813) 563-5787
               </p>
             </div>
           </div>
